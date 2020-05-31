@@ -1,0 +1,135 @@
+/* reset do css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* fim do reset */  
+
+body {
+    background: #4499ff;
+    background-size: auto 100vh;
+    font-family: Helvetica;
+    height: 100vh;
+}
+
+/* se a tela tiver pelo menos 400px, carrega estes estilos */
+@media (min-width: 400px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* se a tela tiver pelo menos 600px, carrega estes estilos */
+@media (min-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+/* se a tela tiver pelo menos 1200px, carrega estes estilos */
+@media (min-width: 1200px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+
+header {
+    align-items: center;
+    display: flex;
+    height: 78vh;
+    justify-content: center;
+}
+
+.menu {
+    background-color: navy;
+    padding: 0.28em;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li {
+    font-family: 'Montserrat', sans-serif;
+    list-style: none;
+}
+
+.menu a {
+    display: block;
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.site-subtitle,
+.site-title {
+    color: whitesmoke;
+    text-align: center;
+}
+
+.site-title {
+    font-size: 4em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.site-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    line-height: 1.3em;
+}
+
+.portfolio {
+    padding: 2em;
+    height: 100vh;
+}
+
+.portfolio h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    margin-bottom: 0.7em;
+}
+
+.portfolio .grid {
+    display: grid;
+    gap: 2em;
+}
+
+@media (min-width: 560px) {
+    .portfolio .grid {
+    grid-template-columns: 240px 240px;
+    }
+}
+
+@media (min-width: 900px) {
+    .portfolio .grid {
+    align-content: center;
+    grid-template-columns: repeat(3, 260px);
+    height: calc(100vh - 8em - 48px);
+    justify-content: center;
+    margin-bottom: 0.7em;
+    }
+}
+
+.portfolio figure {
+    text-align: center;
+}
+
+.img-portfolio {
+    height: 180px;
+    width: 180px;
+    object-fit: cover;
+    object-position: bottom;
+}
+
